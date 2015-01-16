@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>각종 선택자</title>
+	<style type="text/css">
+		#navigation li{
+			color:blue;
+		}
+
+		#navigation li a{
+			color:red;
+		}
+
+		h1, #link, a{
+			color:green;
+		}
+
+		#child > li{
+			border:1px solid green;
+		}
+	</style>
+</head>
+<body>
+
+	<!--하위 선택자
+	특정 엘리먼트의 하위에 나오는 엘리먼트를 선택하는데 사용
+	부모가 먼저 나오고 자식이 나중에 나옴
+	공백을 통해서 부모와 자식을 구분-->
+	<div id = "navigation">
+		<ul>
+			<li>홈</li>
+			<li>제품소개</li>
+			<li>고객센터</li>
+		</ul>
+	</div>
+
+	<div id = "navigation">
+		<ul>
+			<li>Browser</li>
+			<li><a href="http://naver.com">naver</a></li>
+			<li><a href="http://google.co.kr">google</a></li>
+		</ul>	
+	</div>
+	<ul>
+		<li>홈</li>
+		<li>제품소개</li>
+		<li>고객센터</li>
+	</ul>
+
+	<!--selector와 selector사이에 ,가 들어가면 or연산이 일어난다.-->
+	<div id = "link">
+		Hello CSS
+		<h1>Hello Programming</h1>
+		<a href="http://google.co.kr">Google Home Page</a>
+	</div>	
+
+	<!--Chile selector
+	특정 엘리먼트의 직접적인 하위 엘리먼트에 대해서만 선택할때 사용-->
+	<div id = "child">
+		<ul>
+			<li>C언어</li>
+			<li>자바
+				<ul>
+					<li>안드로이드</li>
+					<li>JSP</li>
+				</ul>
+			</li>
+			<li>자바스크립트</li>
+		</ul>
+	</div>
+</body>
+</html>
